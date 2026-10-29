@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards Side by Side</title>
+    <style>
+        /* सर्व घटकांसाठी box-sizing set केले आहे */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            padding: 40px;
+        }
+
+        /* कार्ड्स शेजारी-शेजारी ठेवण्यासाठी Flexbox कंटेनर */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* कार्ड्समधील अंतर */
+            flex-wrap: wrap; /* स्क्रीन लहान झाल्यावर कार्ड्स खाली येतील */
+        }
+
+        /* सिंगल प्रॉडक्ट कार्ड स्टाइलिंग */
+        .product-card {
+            width: 280px;            /* Width */
+            height: 420px;           /* Height */
+            padding: 20px;           /* Padding */
+            border: 2px solid #ddd;  /* Border */
+            border-radius: 12px;     /* Border Radius */
+            margin: 10px;            /* Margin */
+            box-sizing: border-box;   /* Box Sizing */
+
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* कार्डवरील इमेज स्टाइल */
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* शीर्षक आणि डिस्क्रिप्शन */
+        .product-title {
+            font-size: 20px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .product-price {
+            font-size: 18px;
+            color: #28a745;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .product-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        /* Buy Now बटण */
+        .buy-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .buy-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center; margin-bottom: 30px; color: #333;">Our Featured Products</h2>
+
+    <!-- ३ कार्ड्सचा कंटेनर -->
+    <div class="card-container">
+
+        <!-- Card 1 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Headphones">
+            <h3 class="product-title">Wireless Headphones</h3>
+            <p class="product-price">₹2,999</p>
+            <p class="product-desc">High-quality sound with active noise cancellation.</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="Smartwatch">
+            <h3 class="product-title">Smart Watch</h3>
+            <p class="product-price">₹4,499</p>
+            <p class="product-desc">Track your fitness, heart rate, and notifications daily.</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Shoes">
+            <h3 class="product-title">Running Shoes</h3>
+            <p class="product-price">₹3,199</p>
+            <p class="product-desc">Lightweight, durable, and built for daily workouts.</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
